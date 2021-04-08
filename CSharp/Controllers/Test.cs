@@ -10,12 +10,12 @@ namespace CSharp.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class Test : ControllerBase
+	public class test : ControllerBase
 	{ 
 		[HttpGet]
-		public string Get()
+		public string Get(string customerId = null)
 		{
-			return "Success!";
+			return string.IsNullOrEmpty(customerId) ? "Success!" : "Customerid = " + customerId;
 		}
 	}
 }

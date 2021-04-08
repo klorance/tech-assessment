@@ -26,8 +26,15 @@ namespace CSharp
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			ConfigureRepositories(services);
 			services.AddControllers();
 		}
+
+       private static void ConfigureRepositories(IServiceCollection services)
+        {
+            services.AddSingleton<CSharp.Services.Interfaces.IOrderService, CSharp.Services.ListOrderService>();
+        }
+
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

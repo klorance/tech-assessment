@@ -1,2 +1,25 @@
 *node_modules
 *package-lock.json
+# Profile-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Profile-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+.vscode/
+.vs/
+
